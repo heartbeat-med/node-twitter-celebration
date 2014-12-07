@@ -6,6 +6,7 @@ var TwitterSearch = fnIntern( "TwitterSearch" );
 var Arduino = fnIntern("Arduino");
 
 var DEFAULT_QUERY = "@hackinghealthDE";
+var INTERVAL = 6;
 
 var oArduino = new Arduino();
 
@@ -25,4 +26,4 @@ oTwitterSearch.startSearching( process.argv[2] || DEFAULT_QUERY, function( aStat
 }, function( oErr )
 {
   console.log( "ERROR:", oErr );
-}, 10 );
+}, INTERVAL );
