@@ -3,22 +3,26 @@
 var fnIntern = require( "intern-requirements" );
 var oSettings = fnIntern( "oSettings" );
 var TwitterSearch = fnIntern( "TwitterSearch" );
+var Arduino = fnIntern("Arduino");
 
 var DEFAULT_QUERY = "@hackinghealthDE";
 
+var oArduino = new Arduino();
+
+
 function _runArduinoProgram( aStatuses )
 {
-  console.log( aStatuses.length );
+  oArduino.fnNotificationCallback();
 }
 
 var oTwitterSearch = new TwitterSearch( oSettings.twitter );
 
-oTwitterSearch.startSearching( process.argv[2] || DEFAULT_QUERY, function( oStatuses )
+oTwitterSearch.startSearching( process.argv[2] || DEFAULT_QUERY, function( aStatuses )
 {
-  if( oStatuses.length > 0 ) {
-    _runArduinoProgram( oStatuses.length );
+  if( aStatuses.length > 0 ) {
+    _runArduinoProgram( aStatuses.length );
   }
 }, function( oErr )
 {
   console.log( "ERROR:", oErr );
-}, 60 );
+}, 10 );

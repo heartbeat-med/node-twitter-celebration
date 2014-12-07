@@ -16,7 +16,18 @@
   "license": "MIT",
   "dependencies": {
     "intern-requirements": "0.0.6",
+    "j5-songs": "0.0.6",
+    "johnny-five": "^0.8.32",
     "lodash-node": "^2.4.1",
     "twitter": "^0.2.13"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heartbeat-med/node-twitter-celebration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heartbeat-med/node-twitter-celebration/issues"
+  },
+  "homepage": "https://github.com/heartbeat-med/node-twitter-celebration"
 }
