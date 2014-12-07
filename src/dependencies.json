@@ -1,0 +1,6 @@
+{
+  "oSettings"         : "../settings.json",
+  "TwitterSearch"     : "twitter/Search.js",
+  "TwitterError"      : "twitter/TwitterError.js",
+  "oTwitterConstants" : "twitter/constants.json"
+}
