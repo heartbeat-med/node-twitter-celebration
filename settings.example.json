@@ -1,0 +1,8 @@
+{
+  "twitter" : {
+    "consumer_key"        : "XYZ",
+    "consumer_secret"     : "XYZ",
+    "access_token_key"    : "XYZ",
+    "access_token_secret" : "XYZ"
+  }
+}
