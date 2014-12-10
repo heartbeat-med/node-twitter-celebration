@@ -6,11 +6,11 @@ var songs = require( "j5-songs" );
 var SERVO_MAX = 160;
 var SERVO_MIN = 20;
 var PIN_SERVO = 11;
-var SERVO_CENTER = 105;
+var SERVO_CENTER = 72;
 var INTERVAL_SERVO = 4500;
 var PIN_LED = 6;
 var PIN_PIEZO = 3;
-var SONG = "doorbell";
+var SONG = "never-gonna-give-you-up";
 
 function Arduino()
 {
@@ -50,11 +50,11 @@ Arduino.prototype._initBoard = function()
   }.bind( this ) );
 };
 
-Arduino.prototype.fnNotificationCallback = function()
+Arduino.prototype.runNotification = function()
 {
   if( this._bIsReady ) {
     this._oLed.on();
-    this._oServo.min();
+    this._oServo.max();
     this._oPiezo.play(
       this._oSong
     );
