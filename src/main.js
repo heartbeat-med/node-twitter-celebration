@@ -13,7 +13,7 @@ var oArduino = new Arduino();
 
 function _runArduinoProgram( aStatuses )
 {
-  oArduino.fnNotificationCallback();
+  oArduino.runNotification();
 }
 
 var oTwitterSearch = new TwitterSearch( oSettings.twitter );
