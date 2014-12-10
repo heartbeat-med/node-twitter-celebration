@@ -21,7 +21,7 @@ var oTwitterSearch = new TwitterSearch( oSettings.twitter );
 oTwitterSearch.startSearching( process.argv[2] || DEFAULT_QUERY, function( aStatuses )
 {
   if( aStatuses.length > 0 ) {
-    _runArduinoProgram( aStatuses.length );
+    _runArduinoProgram( aStatuses );
   }
 }, function( oErr )
 {

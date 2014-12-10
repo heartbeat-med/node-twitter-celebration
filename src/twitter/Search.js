@@ -1,7 +1,6 @@
 "use strict";
 
 var crypto = require( "crypto" );
-var fnCollectionsFilter = require( "lodash-node/modern/collections/filter" );
 
 var Twitter = require( "twitter" );
 var fnIntern = require( "intern-requirements" );
@@ -86,7 +85,7 @@ Search.prototype._search = function( sQuery, fnCbSuccess, fnCbError )
       if( oData.statuses.length > 0 ) {
 
         if( this._sLastSearchId !== null ) {
-          var aResult = fnCollectionsFilter( oData.statuses, function( oStatus )
+          var aResult = oData.statuses.filter( function( oStatus )
           {
             return oStatus.id > this._sLastSearchId;
           }.bind( this ) );
