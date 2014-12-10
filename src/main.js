@@ -3,7 +3,7 @@
 var fnIntern = require( "intern-requirements" );
 var oSettings = fnIntern( "oSettings" );
 var TwitterSearch = fnIntern( "TwitterSearch" );
-var Arduino = fnIntern("Arduino");
+var Arduino = fnIntern( "Arduino" );
 
 var DEFAULT_QUERY = "@hackinghealthDE";
 var INTERVAL = 6;

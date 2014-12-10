@@ -1,7 +1,7 @@
 "use strict";
 
 var crypto = require( "crypto" );
-
+var util = require( "util" );
 var Twitter = require( "twitter" );
 var fnIntern = require( "intern-requirements" );
 
@@ -79,7 +79,7 @@ Search.prototype._search = function( sQuery, fnCbSuccess, fnCbError )
   this.oTwitter.search( sQuery, function( oData )
   {
     if( oData.statusCode ) {
-      fnCbError( JSON.parse( oData.data ) );
+      fnCbError( util.inspect( oData.data ) );
     } else {
 
       if( oData.statuses.length > 0 ) {
