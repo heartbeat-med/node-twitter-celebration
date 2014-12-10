@@ -13,7 +13,7 @@ cd src/ && node main.js SEARCH_QUERY
 Breadboard/Illustration
 -----------------------
 
-![Alt text](https://lh6.googleusercontent.com/EGN0KID0kJ4oOaxrhvs5wKV20_oDqr_EaRbcLYEVfqOts1dza3PHlL8lDwLUBDbdZ-qf8lRcPN8=w1896-h835 "Optional title")
+![Alt text](./resources/breadboard_illustration.png)
 
 Demo video
 ----------
