@@ -12,6 +12,10 @@ var PIN_LED = 6;
 var PIN_PIEZO = 3;
 var SONG = "never-gonna-give-you-up";
 
+/**
+ * Arduino
+ * @constructor
+ */
 function Arduino()
 {
   this._oBoard = null;
@@ -24,6 +28,10 @@ function Arduino()
   this._initBoard();
 }
 
+/**
+ * Initializes the Arduiono board, servo, led and piezo.
+ * @private
+ */
 Arduino.prototype._initBoard = function()
 {
   this._oBoard = five.Board();
@@ -50,6 +58,9 @@ Arduino.prototype._initBoard = function()
   }.bind( this ) );
 };
 
+/**
+ * Turns the led on, moves the servo and plays the song if the board is initialized.
+ */
 Arduino.prototype.runNotification = function()
 {
   if( this._bIsReady ) {
